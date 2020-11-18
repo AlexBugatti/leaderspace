@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="8944.otf">
+            <string>Troika</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeaderController" customModule="leaderspace" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="84M-ck-HfO" id="8DF-IO-2qm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-2Y-aWN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8H-I7-EPe">
+                            <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="мои Лидерборды" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THD-9y-j9P">
+                                    <rect key="frame" x="60" y="21.5" width="294" height="27"/>
+                                    <fontDescription key="fontDescription" name="Troika" family="Troika" pointSize="24"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps6-tB-S8r">
+                                    <rect key="frame" x="8" y="19" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="2ky-HV-2wp"/>
+                                        <constraint firstAttribute="height" constant="32" id="tXc-2F-yJt"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="back"/>
+                                    <connections>
+                                        <action selector="onDidBackTapped:" destination="-1" eventType="touchUpInside" id="Lse-k7-DOH"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ps6-tB-S8r" firstAttribute="leading" secondItem="g8H-I7-EPe" secondAttribute="leading" constant="8" id="DNW-hW-M3l"/>
+                                <constraint firstAttribute="trailing" secondItem="THD-9y-j9P" secondAttribute="trailing" constant="60" id="K8P-Lb-Pb5"/>
+                                <constraint firstItem="Ps6-tB-S8r" firstAttribute="centerY" secondItem="g8H-I7-EPe" secondAttribute="centerY" id="eXS-Lj-d6h"/>
+                                <constraint firstItem="THD-9y-j9P" firstAttribute="leading" secondItem="g8H-I7-EPe" secondAttribute="leading" constant="60" id="xBO-YC-Oih"/>
+                                <constraint firstItem="THD-9y-j9P" firstAttribute="centerY" secondItem="g8H-I7-EPe" secondAttribute="centerY" id="zL8-NH-k9o"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2149693966" green="0.13327935339999999" blue="0.32382136579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="g8H-I7-EPe" secondAttribute="trailing" id="9dr-w3-ttY"/>
+                        <constraint firstItem="g8H-I7-EPe" firstAttribute="leading" secondItem="kcd-2Y-aWN" secondAttribute="leading" id="XOR-ID-MlO"/>
+                        <constraint firstAttribute="bottom" secondItem="g8H-I7-EPe" secondAttribute="bottom" id="eex-bA-C3A"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="84M-ck-HfO">
+                    <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="84M-ck-HfO" firstAttribute="top" secondItem="kcd-2Y-aWN" secondAttribute="bottom" id="3Dz-5q-9Xz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="84M-ck-HfO" secondAttribute="trailing" id="6vz-J6-zB3"/>
+                <constraint firstAttribute="bottom" secondItem="84M-ck-HfO" secondAttribute="bottom" id="7Rc-CB-rAE"/>
+                <constraint firstItem="kcd-2Y-aWN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9tx-1V-xfB"/>
+                <constraint firstItem="kcd-2Y-aWN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MNw-Bs-oHv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="kcd-2Y-aWN" secondAttribute="bottom" constant="-70" id="Xe8-Dk-UvK"/>
+                <constraint firstItem="84M-ck-HfO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dUM-8Z-3JK"/>
+                <constraint firstItem="kcd-2Y-aWN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nMS-L8-9j2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="g8H-I7-EPe" secondAttribute="top" id="s5B-Od-iXu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="128" height="128"/>
+    </resources>
+</document>
